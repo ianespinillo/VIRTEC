@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  src: url(../fonts/HelveticaNeue-Bold.ttf);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+main {
+  height: 100vh;
+}
+
+.virtecFont {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*crear una animacion de escribir texto dejando centrado el texto */
+
+.write {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(60), forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  to {
+    width: 100%;
   }
 }
