@@ -10,8 +10,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id           String    @id 
+model Alumno {
+  id           String    @id @unique @default(uuid())
   email        String
   nombre       String
   apellido     String
@@ -24,13 +24,73 @@ model User {
   rol          String
   turno        String
   sessions     Session[]
+  Curso        Curso?     @relation(fields: [cursoId], references: [id])
+  cursoId      String?
+  Escuela      Escuela?   @relation(fields: [escuelaId], references: [id])
+  escuelaId    String?
 
   @@map("user")
 }
 
 model Session {
-  id        String   @id
-  userId    String
-  expiresAt DateTime
-  user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
+  id           String   @id @default(cuid())
+  sessionToken String   @map("session_token") @db.Text
+  accessToken  String?  @map("access_token") @db.Text
+  expires      DateTime
+  user         Alumno?  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String?  @map("user_id")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("sessions")
+}
+
+model Materia {
+  id         String   @id @default(uuid())
+  nombre     String
+  tipo       String
+  Curso      Curso?   @relation(fields: [cursoId], references: [id])
+  cursoId    String?
+  Profesor   Profesor @relation(fields: [profesorId], references: [id])
+  profesorId String
+}
+
+model Curso {
+  id         String     @id @default(uuid())
+  year       Int
+  division   Int
+  Alumnos    Alumno[]
+  Materias   Materia[]
+  Profesores Profesor[]
+  Escuela    Escuela?   @relation(fields: [escuelaId], references: [id])
+  escuelaId  String?
+}
+
+model Profesor {
+  id               String    @id @default(uuid())
+  nombre           String
+  apellido         String
+  dni              String    @unique
+  email            String    @unique
+  materias_a_cargo Materia[]
+  cursos_a_cargo   Curso[]
+  Escuela          Escuela?  @relation(fields: [escuelaId], references: [id])
+  escuelaId        String?
+}
+
+model Escuela {
+  id         String     @id @default(uuid())
+  nombre     String
+  ubicacion  String
+  tipo       String
+  profesores Profesor[]
+  alumnos    Alumno[]
+  Cursos     Curso[]
+}
+
+model Herramienta {
+  id        String @id @default(uuid())
+  nombre    String
+  tipo      String
+  categoria String
 }
