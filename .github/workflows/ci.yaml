@@ -22,13 +22,13 @@ jobs:
           version: 9
           
       - name: Install dependencies
-        run: bun install
+        run: pnpm install
         
       - name: Check transpiler
-        run: bun ts:check
+        run: pnpm ts:check
         
       - name: Check eslint
-        run: bun lint:check
+        run: pnpm lint:check
 
       - name: Check tests
-        run: bun run test  
+        run: pnpm run test  
