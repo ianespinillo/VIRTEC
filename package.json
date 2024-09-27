@@ -1,16 +1,31 @@
 {
-  "name": "nest-next-prisma-template",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest",
-    "turbo": "^2.1.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
+	"name": "nest-next-prisma-template",
+	"module": "index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.2",
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"@types/bun": "latest",
+		"jest": "^29.7.0",
+		"turbo": "^2.1.2",
+		"prepare": "husky",
+		"ts:check": "tsc --noEmit"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"test": "turbo run test",
+		"lint": "biome check .",
+		"lint:fix": "biome check . --write"
+	},
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
+	"packageManager": "pnpm@7.30.0",
+	"dependencies": {
+		"husky": "^9.1.6"
+	}
 }
