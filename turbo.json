@@ -26,6 +26,12 @@
 		},
 		"test": {
 			"cache": false
+		},
+		"prepare": {
+			"cache": false
+		},
+		"ts:check": {
+			"cache": false
 		}
 	}
 }
