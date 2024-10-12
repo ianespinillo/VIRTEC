@@ -1,0 +1,31 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": ".."
+    },
+    {
+      "name": "@repo/common",
+      "path": "../packages/common"
+    },
+    {
+      "name": "@repo/eslint-config",
+      "path": "../packages/eslint-config"
+    },
+    {
+      "name": "@repo/hooks",
+      "path": "../packages/hooks"
+    },
+    {
+      "name": "@repo/types",
+      "path": "../packages/types"
+    },
+    {
+      "name": "@repo/ui",
+      "path": "../packages/ui"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "root\\node_modules\\typescript\\lib"
+  }
+}

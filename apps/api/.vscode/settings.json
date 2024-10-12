@@ -1,0 +1,17 @@
+{
+	"symbols.files.associations": {
+		"*.json": "json",
+		"*.js": "javascript",
+		"*.ts": "typescript",
+		"*.tsx": "typescript",
+		"*.html": "html",
+		"*.css": "css",
+		"*.scss": "scss",
+		"*.sass": "sass",
+		"*.service.ts": "nest-service",
+		"*.module.ts": "nest",
+		"*.controller.ts": "nest-controller",
+		"*.hbs": "handlebars"
+	},
+	"typescript.tsdk": "node_modules\\typescript\\lib"
+}

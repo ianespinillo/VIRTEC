@@ -1,0 +1,3 @@
+bun run ts:check
+bun lint:check
+bun run test
