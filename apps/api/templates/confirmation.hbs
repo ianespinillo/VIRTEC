@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+        h1,h4,h5, span{
+            color: #da8734;
+        }
+        span{
+            font-weight: bold;
+        }
+        body{
+            background-color: #44bbf2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a VIRTEC</h1>
+    <h4>Su cuenta a sido creada con la siguiente dirreccion de correo electronico: {{email}}</h4>
+    <h5>
+        <span>Por favor dirigase al siguiente enlace y</span>
+        <a href="{{url}}">cambie su contraseña</a>.      
+    </h5>
+    <span>No responder a este correo, es una notificacion</span>
+</body>
+</html>

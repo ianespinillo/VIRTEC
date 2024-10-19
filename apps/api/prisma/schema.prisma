@@ -1,0 +1,429 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["views"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id                  Int                   @id @default(autoincrement())
+  file_n              String
+  user_id             String
+  created_at          DateTime              @default(now())
+  deleted_at          DateTime?
+  updated_at          DateTime?
+  attendance          Attendance[]
+  grade               Grade[]
+  user                User                  @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  student_course      StudentCourse[]
+  student_detail      StudentDetail[]
+  student_responsable Student_responsable[]
+
+  @@index([user_id])
+  @@map("Student")
+}
+
+model Attendance {
+  id         Int       @id @default(autoincrement())
+  student_id Int
+  course_id  Int
+  subject_id Int
+  date_time  DateTime
+  assists    Boolean
+  teacher_id Int?
+  created_at DateTime  @default(now())
+  updated_at DateTime?
+  course     Course    @relation(fields: [course_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  student    Student   @relation(fields: [student_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  subject    Subject   @relation(fields: [subject_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  teacher    Teacher?  @relation(fields: [teacher_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([student_id])
+  @@index([course_id])
+  @@index([subject_id])
+  @@index([teacher_id])
+  @@map("Attendance")
+}
+
+model Category {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(45)
+  tool Tool[]
+
+  @@map("Category")
+}
+
+model Course {
+  id             Int             @id @default(autoincrement())
+  school_id      Int
+  year           Int
+  division       Int
+  speciallity_id Int
+  preceptor_id   Int
+  created_at     DateTime        @default(now())
+  deleted_at     DateTime?
+  updated_at     DateTime?
+  assistance     Attendance[]
+  preceptor      Preceptor       @relation(fields: [preceptor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  school         School          @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  speciallity    Speciallity     @relation(fields: [speciallity_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  grade          Grade[]
+  subject        Subject[]
+  student_course StudentCourse[]
+  student_detail StudentDetail[]
+
+  @@unique([year, division, school_id, speciallity_id], name: "unique_year_and_division")
+  @@index([school_id])
+  @@index([speciallity_id])
+  @@index([preceptor_id])
+  @@map("Course")
+}
+
+model Withdraw_detail {
+  id          Int       @id @default(autoincrement())
+  tool_id     Int
+  withdraw_id Int
+  created_at  DateTime  @default(now())
+  deleted_at  DateTime?
+  updated_at  DateTime?
+  tool        Tool      @relation(fields: [tool_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  withdraw    Withdraw  @relation(fields: [withdraw_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([tool_id])
+  @@index([withdraw_id])
+  @@map("withdrawDetail")
+}
+
+model School {
+  id          Int           @id @default(autoincrement())
+  address     String        @db.VarChar(200)
+  name        String        @db.VarChar(45)
+  crest_url   String?
+  created_at  DateTime      @default(now())
+  deleted_at  DateTime?
+  updated_at  DateTime?
+  courses     Course[]
+  speciallity Speciallity[]
+  storeroom   Storeroom[]
+  user        User[]
+
+  @@map("School")
+}
+
+model Speciallity {
+  id         Int         @id @default(autoincrement())
+  name       String      @db.VarChar(45)
+  school_id  Int
+  created_at DateTime    @default(now())
+  deleted_at DateTime?
+  updated_at DateTime?
+  course     Course[]
+  school     School      @relation(fields: [school_id], references: [id])
+  storeroom  Storeroom[]
+
+  @@map("Speciallity")
+}
+
+model Tool {
+  id                  Int               @id @default(autoincrement())
+  name                String            @db.VarChar(60)
+  storeroom_id        Int
+  measurement_type_id Int
+  use_type_id         Int
+  category_id         Int
+  created_at          DateTime          @default(now())
+  deleted_at          DateTime?
+  updated_at          DateTime?
+  category            Category          @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  measurement_type    Measurement_type  @relation(fields: [measurement_type_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  storeroom           Storeroom         @relation(fields: [storeroom_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  use_type            Use_type          @relation(fields: [use_type_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  withdraw_detail     Withdraw_detail[]
+
+  @@index([category_id])
+  @@index([storeroom_id])
+  @@index([measurement_type_id])
+  @@index([use_type_id])
+  @@map("Tool")
+}
+
+model Subject {
+  id         Int             @id @default(autoincrement())
+  name       String          @db.VarChar(45)
+  start_time String
+  end_time   String
+  course_id  Int
+  teacher_id Int
+  created_at DateTime        @default(now())
+  deleted_at DateTime?
+  updated_at DateTime?
+  attendance Attendance[]
+  grade      Grade[]
+  course     Course          @relation(fields: [course_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  teacher    Teacher         @relation(fields: [teacher_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  pending1   StudentDetail[] @relation("pending1")
+  pending2   StudentDetail[] @relation("pending2")
+
+  @@unique([name, course_id, start_time, end_time], name: "unique_subject")
+  @@index([course_id])
+  @@index([teacher_id])
+  @@map("Subject")
+}
+
+model Grade {
+  id         Int       @id @default(autoincrement())
+  subject_id Int
+  course_id  Int
+  student_id Int
+  bimester   Int
+  grade      Decimal   @db.Decimal(2, 0)
+  created_at DateTime  @default(now())
+  deleted_at DateTime?
+  updated_at DateTime?
+  course     Course    @relation(fields: [course_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  student    Student   @relation(fields: [student_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  subject    Subject   @relation(fields: [subject_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([student_id])
+  @@index([course_id])
+  @@index([subject_id])
+  @@map("Grade")
+}
+
+model Storeroom {
+  id             Int         @id @default(autoincrement())
+  storemam_id    Int
+  speciallity_id Int
+  school_id      Int
+  created_at     DateTime    @default(now())
+  deleted_at     DateTime?
+  updated_at     DateTime?
+  escuela        School      @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  speciallity    Speciallity @relation(fields: [speciallity_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  storeman       Storeman    @relation(fields: [storemam_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  tool           Tool[]
+
+  @@index([school_id])
+  @@index([speciallity_id])
+  @@index([storemam_id])
+  @@map("Storeroom")
+}
+
+model Storeman {
+  id         Int         @id @default(autoincrement())
+  user_id    String
+  created_at DateTime    @default(now())
+  deleted_at DateTime?
+  updated_at DateTime?
+  user       User        @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  storeroom  Storeroom[]
+
+  @@index([user_id])
+  @@map("Storeman")
+}
+
+model Preceptor {
+  id         Int       @id @unique @default(autoincrement())
+  user_id    String
+  created_at DateTime  @default(now())
+  deleted_at DateTime?
+  updated_at DateTime?
+  course     Course[]
+  user       User      @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([user_id])
+  @@map("Preceptor")
+}
+
+model Teacher {
+  id         Int          @id @default(autoincrement())
+  file_n     String
+  user_id    String
+  created_at DateTime     @default(now())
+  deleted_at DateTime?
+  updated_at DateTime?
+  attendance Attendance[]
+  subject    Subject[]
+  user       User         @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([user_id])
+  @@map("Teacher")
+}
+
+model Withdraw {
+  id              Int               @id @default(autoincrement())
+  created_at      DateTime          @default(now())
+  user_id         String
+  user            User              @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  withdraw_detail Withdraw_detail[]
+
+  @@index([user_id])
+  @@map("Withdraw")
+}
+
+model Measurement_type {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(45)
+  tool Tool[]
+
+  @@map("measurementType")
+}
+
+model Use_type {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(45)
+  tool Tool[]
+
+  @@map("useType")
+}
+
+model User {
+  id          String       @id @default(cuid())
+  email       String       @unique @db.VarChar(256)
+  password    String       @db.VarChar(256)
+  is_active   Boolean      @default(false)
+  school_id   Int
+  role_id     Int
+  created_at  DateTime     @default(now())
+  deleted_at  DateTime?
+  updated_at  DateTime?
+  preceptor   Preceptor[]
+  storeman    Storeman[]
+  student     Student[]
+  teacher     Teacher[]
+  rol         Roles        @relation(fields: [role_id], references: [id])
+  school      School       @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  retire      Withdraw[]
+  user_detail User_detail?
+
+  @@index([school_id])
+  @@map("User")
+}
+
+model User_detail {
+  id         Int       @id @default(autoincrement())
+  name       String    @db.VarChar(256)
+  surname    String    @db.VarChar(256)
+  dni        String    @unique
+  birthdate  String    @db.VarChar(256)
+  address    String    @db.VarChar(256)
+  cuil       String
+  user_id    String    @unique
+  created_at DateTime  @default(now())
+  deleted_at DateTime?
+  updated_at DateTime?
+  user       User      @relation(fields: [user_id], references: [id])
+
+  @@map("userDetail")
+}
+
+model Roles {
+  id             Int              @id @default(autoincrement())
+  name           String           @unique @db.VarChar(45)
+  PermissionRole PermissionRole[]
+  User           User[]
+
+  @@map("Roles")
+}
+
+model StudentCourse {
+  id           Int          @id @default(autoincrement())
+  student_id   Int
+  course_id    Int
+  schoolYearId Int
+  course       Course       @relation(fields: [course_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  SchoolYear   SchoolPeriod @relation(fields: [schoolYearId], references: [id])
+  student      Student      @relation(fields: [student_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([student_id])
+  @@index([course_id])
+  @@map("studentCourse")
+}
+
+model SchoolPeriod {
+  id           Int             @id @unique @default(autoincrement())
+  name         String          @unique
+  StdentCourse StudentCourse[]
+
+  @@map("SchoolPeriod")
+}
+
+model StudentDetail {
+  id                     Int      @id @default(autoincrement())
+  school_origin          String?  @db.VarChar(45)
+  student_id             Int
+  id_next_course         Int
+  has_owes_partial_grade Boolean
+  is_differenced_circuit Boolean
+  equivalences           Boolean
+  pending1_id            Int?
+  pending2_id            Int?
+  next_couse             Course   @relation(fields: [id_next_course], references: [id])
+  pending1               Subject? @relation("pending1", fields: [pending1_id], references: [id])
+  pending2               Subject? @relation("pending2", fields: [pending2_id], references: [id])
+  student                Student  @relation(fields: [student_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([student_id])
+  @@map("studentDetail")
+}
+
+model Student_responsable {
+  id         Int     @id @default(autoincrement())
+  student_id Int
+  cuil       String
+  name       String
+  surname    String
+  phone      String
+  student    Student @relation(fields: [student_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([student_id])
+  @@map("studentResponsable")
+}
+
+model Permission {
+  id             Int              @id @default(autoincrement())
+  name           String           @unique
+  PermissionRole PermissionRole[]
+}
+
+model PermissionRole {
+  id            Int        @id @unique @default(autoincrement())
+  role_id       Int
+  permission_id Int
+  permission    Permission @relation(fields: [permission_id], references: [id])
+  role          Roles      @relation(fields: [role_id], references: [id])
+
+  @@unique([role_id, permission_id], name: "unique_role_permission")
+}
+view user_permissions {
+  id      Int    @id @unique
+  user_id String
+  name    String
+}
+
+view Student_info {
+  id       Int    @id @unique
+  dni      String
+  name     String
+  surname  String
+  file_n   String
+  email    String
+  year     Int
+  division Int
+
+  @@map("student_info")
+}
+
+view User_roles {
+  id          String @id @unique
+  email       String
+  rol_id      Int
+  rol_name    String
+  school_id   Int
+  school_name String
+
+  @@map("user_roles")
+}

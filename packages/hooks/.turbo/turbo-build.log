@@ -1,0 +1,40 @@
+
+> @repo/hooks@1.0.0 build C:\Users\Espin\Documents\GitHub\virtec\packages\hooks
+> tsup ./src --dts
+
+[34mCLI[39m Building entry: src/index.ts, src/hooks/use-profile.ts, src/hooks/use-school.ts, src/providers/tanstack-provider.tsx
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.3.0
+[34mCLI[39m Using tsup config: C:\Users\Espin\Documents\GitHub\virtec\packages\hooks\tsup.config.ts
+[34mCLI[39m Target: node18
+[34mCLI[39m Cleaning output folder
+[34mCJS[39m Build start
+[34mESM[39m Build start
+[32mCJS[39m [1mdist\index.js                           [22m[32m952.00 B[39m
+[32mCJS[39m [1mdist\hooks\use-school.js                [22m[32m153.00 B[39m
+[32mCJS[39m [1mdist\hooks\use-profile.js               [22m[32m1.37 KB[39m
+[32mCJS[39m [1mdist\providers\tanstack-provider.js     [22m[32m586.00 B[39m
+[32mCJS[39m [1mdist\index.js.map                       [22m[32m89.00 B[39m
+[32mCJS[39m [1mdist\hooks\use-school.js.map            [22m[32m189.00 B[39m
+[32mCJS[39m [1mdist\providers\tanstack-provider.js.map [22m[32m739.00 B[39m
+[32mCJS[39m [1mdist\hooks\use-profile.js.map           [22m[32m3.02 KB[39m
+[32mCJS[39m ⚡️ Build success in 432ms
+[32mESM[39m [1mdist\providers\tanstack-provider.mjs     [22m[32m398.00 B[39m
+[32mESM[39m [1mdist\hooks\use-school.mjs                [22m[32m131.00 B[39m
+[32mESM[39m [1mdist\providers\tanstack-provider.mjs.map [22m[32m686.00 B[39m
+[32mESM[39m [1mdist\index.mjs                           [22m[32m189.00 B[39m
+[32mESM[39m [1mdist\hooks\use-profile.mjs               [22m[32m1.34 KB[39m
+[32mESM[39m [1mdist\hooks\use-school.mjs.map            [22m[32m188.00 B[39m
+[32mESM[39m [1mdist\index.mjs.map                       [22m[32m90.00 B[39m
+[32mESM[39m [1mdist\hooks\use-profile.mjs.map           [22m[32m3.02 KB[39m
+[32mESM[39m ⚡️ Build success in 434ms
+[34mDTS[39m Build start
+[32mDTS[39m ⚡️ Build success in 8286ms
+[32mDTS[39m [1mdist\index.d.ts                        [22m[32m212.00 B[39m
+[32mDTS[39m [1mdist\hooks\use-profile.d.ts            [22m[32m342.00 B[39m
+[32mDTS[39m [1mdist\hooks\use-school.d.ts             [22m[32m60.00 B[39m
+[32mDTS[39m [1mdist\providers\tanstack-provider.d.ts  [22m[32m179.00 B[39m
+[32mDTS[39m [1mdist\index.d.mts                       [22m[32m215.00 B[39m
+[32mDTS[39m [1mdist\hooks\use-profile.d.mts           [22m[32m342.00 B[39m
+[32mDTS[39m [1mdist\hooks\use-school.d.mts            [22m[32m60.00 B[39m
+[32mDTS[39m [1mdist\providers\tanstack-provider.d.mts [22m[32m179.00 B[39m
