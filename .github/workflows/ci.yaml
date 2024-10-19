@@ -25,8 +25,8 @@ jobs:
         run: pnpm install
 
       - name: Pre-build
-        run: pnpm build
-        
+        run: pnpm build --filter=@repo/*
+
       - name: Check transpiler
         run: pnpm ts:check
         

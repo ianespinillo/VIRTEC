@@ -14,94 +14,94 @@
 dist/components/ui/input.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/input.mjs" was ignored.
 dist/components/ui/label.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/label.mjs" was ignored.
 dist/components/ui/label.mjs (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/label.mjs" was ignored.
-dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/index.mjs" was ignored.
 dist/components/forms/dni-form.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/dni-form.mjs" was ignored.
 dist/components/forms/dni-form.mjs (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/dni-form.mjs" was ignored.
 dist/components/forms/email-form.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/email-form.mjs" was ignored.
+dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/index.mjs" was ignored.
+dist/components/forms/login-form.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/login-form.mjs" was ignored.
+dist/components/forms/login-form.mjs (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/login-form.mjs" was ignored.
 dist/components/ui/tabs.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/tabs.mjs" was ignored.
 dist/components/ui/tabs.mjs (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/tabs.mjs" was ignored.
 dist/components/ui/table.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/table.mjs" was ignored.
-dist/components/forms/login-form.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/login-form.mjs" was ignored.
-dist/components/forms/login-form.mjs (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/login-form.mjs" was ignored.
 dist/chunk-4XOVWOWZ.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-4XOVWOWZ.mjs" was ignored.
-dist/chunk-P7V5QYYU.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-P7V5QYYU.mjs" was ignored.
-dist/chunk-TTPFNTME.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-TTPFNTME.mjs" was ignored.
-dist/chunk-FDRPVQBE.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-FDRPVQBE.mjs" was ignored.
 dist/components/ui/button.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/button.mjs" was ignored.
+dist/chunk-FDRPVQBE.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-FDRPVQBE.mjs" was ignored.
 dist/components/ui/card.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/card.mjs" was ignored.
+dist/chunk-TTPFNTME.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-TTPFNTME.mjs" was ignored.
+dist/chunk-P7V5QYYU.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-P7V5QYYU.mjs" was ignored.
+dist/chunk-MV4O3YAA.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-MV4O3YAA.mjs" was ignored.
 dist/chunk-OT53SFLF.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-OT53SFLF.mjs" was ignored.
 dist/chunk-OMBDPVA7.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-OMBDPVA7.mjs" was ignored.
-dist/chunk-MV4O3YAA.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-MV4O3YAA.mjs" was ignored.
 dist/chunk-VOFPBXKH.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-VOFPBXKH.mjs" was ignored.
 dist/components/ui/form.mjs (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/form.mjs" was ignored.
 dist/components/ui/form.mjs (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/form.mjs" was ignored.
 dist/components/ui/input.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/input.js" was ignored.
 dist/components/ui/label.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/label.js" was ignored.
 dist/components/ui/label.js (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/label.js" was ignored.
-dist/components/ui/table.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/table.js" was ignored.
+dist/index.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/index.js" was ignored.
 dist/components/ui/tabs.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/tabs.js" was ignored.
 dist/components/ui/tabs.js (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/tabs.js" was ignored.
-dist/index.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/index.js" was ignored.
 dist/components/forms/dni-form.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/dni-form.js" was ignored.
 dist/components/forms/dni-form.js (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/dni-form.js" was ignored.
 dist/components/forms/email-form.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/email-form.js" was ignored.
+dist/components/ui/table.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/table.js" was ignored.
 dist/components/forms/login-form.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/login-form.js" was ignored.
 dist/components/forms/login-form.js (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/forms/login-form.js" was ignored.
 dist/chunk-KRQWFUNB.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-KRQWFUNB.js" was ignored.
+dist/chunk-BOAXP74G.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-BOAXP74G.js" was ignored.
 dist/components/ui/button.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/button.js" was ignored.
 dist/chunk-NMR6OQWV.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-NMR6OQWV.js" was ignored.
-dist/chunk-BOAXP74G.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-BOAXP74G.js" was ignored.
-dist/chunk-6ANYWGMQ.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-6ANYWGMQ.js" was ignored.
-dist/chunk-GF6AHBWK.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-GF6AHBWK.js" was ignored.
 dist/components/ui/card.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/card.js" was ignored.
-dist/chunk-THSOWGKZ.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-THSOWGKZ.js" was ignored.
+dist/chunk-GF6AHBWK.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-GF6AHBWK.js" was ignored.
+dist/chunk-6ANYWGMQ.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-6ANYWGMQ.js" was ignored.
 dist/chunk-3OZBDNRM.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-3OZBDNRM.js" was ignored.
+dist/chunk-THSOWGKZ.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-THSOWGKZ.js" was ignored.
 dist/chunk-TL4KOMSN.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/chunk-TL4KOMSN.js" was ignored.
 dist/components/ui/form.js (1:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/form.js" was ignored.
 dist/components/ui/form.js (2:0): Module level directives cause errors when bundled, "use client" in "dist/components/ui/form.js" was ignored.
 [32mESM[39m [1mdist\globals.css                     [22m[32m12.80 KB[39m
-[32mESM[39m [1mdist\components\forms\dni-form.mjs   [22m[32m162.00 B[39m
-[32mESM[39m [1mdist\index.mjs                       [22m[32m241.00 B[39m
-[32mESM[39m [1mdist\components\ui\input.mjs         [22m[32m90.00 B[39m
 [32mESM[39m [1mdist\components\ui\label.mjs         [22m[32m90.00 B[39m
-[32mESM[39m [1mdist\components\forms\login-form.mjs [22m[32m269.00 B[39m
+[32mESM[39m [1mdist\components\forms\dni-form.mjs   [22m[32m162.00 B[39m
+[32mESM[39m [1mdist\components\ui\input.mjs         [22m[32m90.00 B[39m
 [32mESM[39m [1mdist\components\forms\email-form.mjs [22m[32m164.00 B[39m
+[32mESM[39m [1mdist\components\forms\login-form.mjs [22m[32m269.00 B[39m
+[32mESM[39m [1mdist\index.mjs                       [22m[32m241.00 B[39m
 [32mESM[39m [1mdist\components\ui\tabs.mjs          [22m[32m1.20 KB[39m
 [32mESM[39m [1mdist\chunk-4XOVWOWZ.mjs              [22m[32m1.59 KB[39m
+[32mESM[39m [1mdist\chunk-FDRPVQBE.mjs              [22m[32m597.00 B[39m
 [32mESM[39m [1mdist\components\ui\table.mjs         [22m[32m1.66 KB[39m
-[32mESM[39m [1mdist\chunk-P7V5QYYU.mjs              [22m[32m1.49 KB[39m
 [32mESM[39m [1mdist\components\ui\button.mjs        [22m[32m112.00 B[39m
 [32mESM[39m [1mdist\components\ui\card.mjs          [22m[32m179.00 B[39m
 [32mESM[39m [1mdist\chunk-TTPFNTME.mjs              [22m[32m1.48 KB[39m
+[32mESM[39m [1mdist\chunk-MV4O3YAA.mjs              [22m[32m417.00 B[39m
 [32mESM[39m [1mdist\chunk-OT53SFLF.mjs              [22m[32m1.24 KB[39m
-[32mESM[39m [1mdist\chunk-FDRPVQBE.mjs              [22m[32m597.00 B[39m
-[32mESM[39m [1mdist\chunk-OMBDPVA7.mjs              [22m[32m1.07 KB[39m
+[32mESM[39m [1mdist\chunk-P7V5QYYU.mjs              [22m[32m1.49 KB[39m
 [32mESM[39m [1mdist\components\ui\form.mjs          [22m[32m1.94 KB[39m
 [32mESM[39m [1mdist\chunk-VOFPBXKH.mjs              [22m[32m134.00 B[39m
-[32mESM[39m [1mdist\chunk-MV4O3YAA.mjs              [22m[32m417.00 B[39m
-[32mESM[39m ⚡️ Build success in 2896ms
+[32mESM[39m [1mdist\chunk-OMBDPVA7.mjs              [22m[32m1.07 KB[39m
+[32mESM[39m ⚡️ Build success in 3419ms
 [32mCJS[39m [1mdist\globals.css                    [22m[32m12.80 KB[39m
+[32mCJS[39m [1mdist\components\forms\dni-form.js   [22m[32m301.00 B[39m
 [32mCJS[39m [1mdist\components\ui\input.js         [22m[32m227.00 B[39m
+[32mCJS[39m [1mdist\components\forms\email-form.js [22m[32m303.00 B[39m
 [32mCJS[39m [1mdist\components\ui\label.js         [22m[32m227.00 B[39m
+[32mCJS[39m [1mdist\components\ui\tabs.js          [22m[32m1.91 KB[39m
+[32mCJS[39m [1mdist\components\forms\login-form.js [22m[32m411.00 B[39m
+[32mCJS[39m [1mdist\chunk-KRQWFUNB.js              [22m[32m2.13 KB[39m
 [32mCJS[39m [1mdist\components\ui\table.js         [22m[32m2.45 KB[39m
 [32mCJS[39m [1mdist\components\ui\button.js        [22m[32m351.00 B[39m
-[32mCJS[39m [1mdist\components\ui\tabs.js          [22m[32m1.91 KB[39m
-[32mCJS[39m [1mdist\components\forms\dni-form.js   [22m[32m301.00 B[39m
 [32mCJS[39m [1mdist\index.js                       [22m[32m383.00 B[39m
-[32mCJS[39m [1mdist\components\forms\login-form.js [22m[32m411.00 B[39m
-[32mCJS[39m [1mdist\components\forms\email-form.js [22m[32m303.00 B[39m
-[32mCJS[39m [1mdist\chunk-KRQWFUNB.js              [22m[32m2.13 KB[39m
 [32mCJS[39m [1mdist\components\ui\card.js          [22m[32m826.00 B[39m
 [32mCJS[39m [1mdist\chunk-BOAXP74G.js              [22m[32m1.08 KB[39m
 [32mCJS[39m [1mdist\chunk-6ANYWGMQ.js              [22m[32m1.93 KB[39m
 [32mCJS[39m [1mdist\chunk-NMR6OQWV.js              [22m[32m1.96 KB[39m
-[32mCJS[39m [1mdist\chunk-GF6AHBWK.js              [22m[32m1.79 KB[39m
 [32mCJS[39m [1mdist\chunk-3OZBDNRM.js              [22m[32m168.00 B[39m
-[32mCJS[39m [1mdist\chunk-THSOWGKZ.js              [22m[32m1.78 KB[39m
+[32mCJS[39m [1mdist\chunk-GF6AHBWK.js              [22m[32m1.79 KB[39m
 [32mCJS[39m [1mdist\components\ui\form.js          [22m[32m2.74 KB[39m
+[32mCJS[39m [1mdist\chunk-THSOWGKZ.js              [22m[32m1.78 KB[39m
 [32mCJS[39m [1mdist\chunk-TL4KOMSN.js              [22m[32m1.02 KB[39m
-[32mCJS[39m ⚡️ Build success in 2900ms
-[32mDTS[39m ⚡️ Build success in 14790ms
+[32mCJS[39m ⚡️ Build success in 3427ms
+[32mDTS[39m ⚡️ Build success in 14969ms
 [32mDTS[39m [1mdist\globals.d.mts                     [22m[32m13.00 B[39m
 [32mDTS[39m [1mdist\components\forms\dni-form.d.mts   [22m[32m115.00 B[39m
 [32mDTS[39m [1mdist\components\forms\email-form.d.mts [22m[32m119.00 B[39m

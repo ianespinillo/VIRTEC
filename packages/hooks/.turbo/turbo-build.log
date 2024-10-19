@@ -10,26 +10,26 @@
 [34mCLI[39m Cleaning output folder
 [34mCJS[39m Build start
 [34mESM[39m Build start
-[32mCJS[39m [1mdist\providers\tanstack-provider.js     [22m[32m586.00 B[39m
 [32mCJS[39m [1mdist\index.js                           [22m[32m952.00 B[39m
-[32mCJS[39m [1mdist\hooks\use-profile.js               [22m[32m1.37 KB[39m
 [32mCJS[39m [1mdist\hooks\use-school.js                [22m[32m153.00 B[39m
+[32mCJS[39m [1mdist\hooks\use-profile.js               [22m[32m1.37 KB[39m
+[32mCJS[39m [1mdist\providers\tanstack-provider.js     [22m[32m586.00 B[39m
 [32mCJS[39m [1mdist\index.js.map                       [22m[32m89.00 B[39m
 [32mCJS[39m [1mdist\hooks\use-school.js.map            [22m[32m189.00 B[39m
 [32mCJS[39m [1mdist\providers\tanstack-provider.js.map [22m[32m739.00 B[39m
 [32mCJS[39m [1mdist\hooks\use-profile.js.map           [22m[32m3.02 KB[39m
-[32mCJS[39m ⚡️ Build success in 341ms
-[32mESM[39m [1mdist\index.mjs                           [22m[32m189.00 B[39m
+[32mCJS[39m ⚡️ Build success in 432ms
 [32mESM[39m [1mdist\providers\tanstack-provider.mjs     [22m[32m398.00 B[39m
 [32mESM[39m [1mdist\hooks\use-school.mjs                [22m[32m131.00 B[39m
-[32mESM[39m [1mdist\hooks\use-profile.mjs               [22m[32m1.34 KB[39m
 [32mESM[39m [1mdist\providers\tanstack-provider.mjs.map [22m[32m686.00 B[39m
+[32mESM[39m [1mdist\index.mjs                           [22m[32m189.00 B[39m
+[32mESM[39m [1mdist\hooks\use-profile.mjs               [22m[32m1.34 KB[39m
 [32mESM[39m [1mdist\hooks\use-school.mjs.map            [22m[32m188.00 B[39m
 [32mESM[39m [1mdist\index.mjs.map                       [22m[32m90.00 B[39m
 [32mESM[39m [1mdist\hooks\use-profile.mjs.map           [22m[32m3.02 KB[39m
-[32mESM[39m ⚡️ Build success in 354ms
+[32mESM[39m ⚡️ Build success in 434ms
 [34mDTS[39m Build start
-[32mDTS[39m ⚡️ Build success in 8292ms
+[32mDTS[39m ⚡️ Build success in 8286ms
 [32mDTS[39m [1mdist\index.d.ts                        [22m[32m212.00 B[39m
 [32mDTS[39m [1mdist\hooks\use-profile.d.ts            [22m[32m342.00 B[39m
 [32mDTS[39m [1mdist\hooks\use-school.d.ts             [22m[32m60.00 B[39m
