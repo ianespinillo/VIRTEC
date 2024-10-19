@@ -344,3 +344,6 @@
 2024-10-19T16:37:47.321191Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\api")}
 2024-10-19T16:37:47.321229Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("api"), path: AnchoredSystemPathBuf("apps\\api") }}))
 2024-10-19T16:37:50.444794Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-10-19T16:39:01.295997Z  WARN daemon_server: turborepo_lib::commands::daemon: daemon already running
+2024-10-19T16:39:01.308815Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\1.cookie"), AnchoredSystemPathBuf(".turbo\\cookies"), AnchoredSystemPathBuf(".turbo\\cookies\\.turbo-cookie")}
+2024-10-19T16:39:01.308864Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
