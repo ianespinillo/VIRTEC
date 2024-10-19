@@ -22,6 +22,7 @@
 		"db:push": "prisma db push",
 		"db:pull": "prisma db pull && prisma generate",
 		"db-build": "prisma generate && prisma db push",
+		"db:generate": "prisma generate",
 		"db-seed": "prisma db seed",
 		"db-reset": "ts-node prisma/truncate.ts",
 		"lint:format": "bunx @biomejs/biome format --write .",
