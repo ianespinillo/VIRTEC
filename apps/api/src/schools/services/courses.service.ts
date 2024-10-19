@@ -2,7 +2,7 @@ import { PrismaService } from '@/db/prisma.service';
 import { SchoolsService } from '@/schools/services/schools.service';
 import { BadRequestException, Injectable } from '@nestjs/common';
 import type { Course } from '@prisma/client';
-import type { CreateCourseDTO } from '@repo/types/src/schools/create-course.dto';
+import type { CreateCourseDTO } from '@repo/common';
 import type { FindCourse } from '../types';
 import { PreceptorsService } from './preceptors.service';
 

@@ -1,9 +1,8 @@
 import { PermissionsNeeded } from '@/auth/decorators/permissions.decorator';
 import { User } from '@/auth/decorators/user.decorator';
-import { AuthUser } from '../../../../../packages/types/src/auth/types';
-import { PERMISSIONS } from '@repo/common/src/permissions';
-import type { CreateUserDTO } from '@/users/dtos/user.dto';
+
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { type AuthUser, type CreateUserDTO, PERMISSIONS } from '@repo/common';
 import { PreceptorsService } from '../services/preceptors.service';
 
 @Controller('preceptors')

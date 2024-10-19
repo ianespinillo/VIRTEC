@@ -1,22 +1,17 @@
 {
-  "compilerOptions": {
-    "module": "NodeNext",
-    "moduleDetection": "force",
+	"compilerOptions": {
+		"module": "NodeNext",
+		"moduleDetection": "force",
 		"noUncheckedIndexedAccess": true,
 		"resolveJsonModule": true,
 		"target": "ES2022",
-    "strict": true,
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "nodenext",
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      //"@repo/common/*": ["./packages/common/src/*"],
-      "@repo/types/*": ["./packages/types/src/*"],
-      "@repo/hook/*": ["./packages/hook/src/*"]
-    }
-  }
+		"strict": true,
+		"jsx": "preserve",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "nodenext",
+		"isolatedModules": true,
+		"baseUrl": "."
+	}
 }

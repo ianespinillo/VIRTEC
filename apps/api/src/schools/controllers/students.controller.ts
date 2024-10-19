@@ -1,9 +1,11 @@
 import { PermissionsNeeded } from '@/auth/decorators/permissions.decorator';
 import { User } from '@/auth/decorators/user.decorator';
-import { AuthUser } from '../../../../../packages/types/src/auth/types';
-import { PERMISSIONS } from '@repo/common/src/permissions';
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import type { CreateStudentDTO } from '../../../../../packages/types/src/schools/create-student.dto';
+import {
+	type AuthUser,
+	type CreateStudentDTO,
+	PERMISSIONS,
+} from '@repo/common';
 import { StudentsService } from '../services/students.service';
 
 @Controller('students')

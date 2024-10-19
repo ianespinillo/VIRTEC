@@ -286,6 +286,7 @@ model User {
   password    String       @db.VarChar(256)
   is_active   Boolean      @default(false)
   school_id   Int
+  role_id     Int
   created_at  DateTime     @default(now())
   deleted_at  DateTime?
   updated_at  DateTime?
@@ -293,10 +294,10 @@ model User {
   storeman    Storeman[]
   student     Student[]
   teacher     Teacher[]
+  rol         Roles        @relation(fields: [role_id], references: [id])
   school      School       @relation(fields: [school_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   retire      Withdraw[]
   user_detail User_detail?
-  user_role   User_role[]
 
   @@index([school_id])
   @@map("User")
@@ -323,21 +324,9 @@ model Roles {
   id             Int              @id @default(autoincrement())
   name           String           @unique @db.VarChar(45)
   PermissionRole PermissionRole[]
-  user_role      User_role[]
+  User           User[]
 
   @@map("Roles")
-}
-
-model User_role {
-  id      Int    @id @default(autoincrement())
-  user_id String
-  rol_id  Int
-  roles   Roles  @relation(fields: [rol_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  user    User   @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
-
-  @@index([rol_id])
-  @@index([user_id])
-  @@map("userRole")
 }
 
 model StudentCourse {
@@ -409,26 +398,6 @@ model PermissionRole {
 
   @@unique([role_id, permission_id], name: "unique_role_permission")
 }
-
-view Preceptor_info {
-  id        Int    @id @unique
-  dni       String
-  school_id Int
-  email     String
-
-  @@map("preceptor_info")
-}
-
-view user_data {
-  id        String @id @unique
-  dni       String
-  name      String
-  email     String
-  school_id Int
-
-  @@map("user_data")
-}
-
 view user_permissions {
   id      Int    @id @unique
   user_id String

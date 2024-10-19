@@ -1,11 +1,12 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "NodeNext",
-    "noEmit": true,
-    "rootDir": "./src"
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"target": "ES6",
+		"experimentalDecorators": true,
+		"module": "NodeNext",
+		"noEmit": true,
+		"rootDir": "./src"
+	},
+	"include": ["src/**/*.ts", "src/roles.ts"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

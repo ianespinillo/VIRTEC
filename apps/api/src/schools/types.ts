@@ -1,4 +1,5 @@
 import type { UserDetail } from '@/users/types';
+import { User } from '@prisma/client';
 
 export interface FindCourse {
 	year: number;
@@ -36,4 +37,8 @@ export interface Subject {
 	start_time: string;
 	end_time: string;
 	teacher_id?: number;
+}
+
+export interface UserDecorator extends User {
+	permissions: string[];
 }

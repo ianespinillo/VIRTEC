@@ -57,4 +57,3 @@ export const PERMISSIONS = {
 	UPDATE_TOOL: 'UPDATE_TOOL',
 	UPDATE_WORKDAYS: 'UPDATE_WORKDAYS',
 } as const;
-

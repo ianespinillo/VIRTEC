@@ -1,4 +1,4 @@
-import { TOKEN_DURATION } from '@/common/constants';
+import { TOKEN_DURATION } from '@repo/common/';
 import jwt from 'jsonwebtoken';
 import { envs } from './envs';
 

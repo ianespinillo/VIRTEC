@@ -3,7 +3,7 @@ import {
 	SetMetadata,
 	createParamDecorator,
 } from '@nestjs/common';
-import { AuthUser } from '@repo/types/src/auth/types';
+import { AuthUser } from '@repo/common';
 
 export const User = createParamDecorator((_, ctx: ExecutionContext) => {
 	const req = ctx.switchToHttp().getRequest();

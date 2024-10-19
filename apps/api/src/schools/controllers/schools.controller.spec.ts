@@ -18,6 +18,12 @@ const school = {
 	address: 'address',
 	crest_url: 'some url',
 };
+const crest = {
+	buffer: Buffer.from('mock file content'),
+	originalname: 'crest.png',
+	mimetype: 'image/png',
+	size: 1024,
+} as Express.Multer.File;
 
 describe('SchoolsController', () => {
 	let controller: SchoolsController;
@@ -49,7 +55,7 @@ describe('SchoolsController', () => {
 			address: 'address',
 			crest_url: 'some url',
 		});
-		const result = await controller.create(body);
+		const result = await controller.create(body, crest);
 
 		expect(result).toEqual({
 			id: 1,

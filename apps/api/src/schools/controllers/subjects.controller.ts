@@ -1,9 +1,11 @@
 import { PermissionsNeeded } from '@/auth/decorators/permissions.decorator';
 import { User } from '@/auth/decorators/user.decorator';
-import { AuthUser } from '../../../../../packages/types/src/auth/types';
-import { PERMISSIONS } from '@repo/common/src/permissions';
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import type { CreateSubjectDto } from '../../../../../packages/types/src/schools/create-subject.dto';
+import {
+	type AuthUser,
+	type CreateSubjectDto,
+	PERMISSIONS,
+} from '@repo/common';
 import { SubjectsService } from '../services/subjects.service';
 
 @Controller('subjects')

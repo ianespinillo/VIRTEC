@@ -1,4 +1,4 @@
-import { PASSWORD_SALT_ROUNDS } from '@/common/constants';
+import { PASSWORD_SALT_ROUNDS } from '@repo/common';
 import { compare, hash } from 'bcryptjs';
 
 export class PasswordAdapter {

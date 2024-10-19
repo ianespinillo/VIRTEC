@@ -5,19 +5,19 @@ import { UsersModule } from '@/users/users.module';
 import { Module, forwardRef } from '@nestjs/common';
 import { CoursesController } from './controllers/courses.controller';
 import { PreceptorsController } from './controllers/preceptors.controller';
+import { SchoolAdminController } from './controllers/school-admin.controller';
 import { SchoolsController } from './controllers/schools.controller';
 import { SpeciallityController } from './controllers/speciallity.controller';
 import { StudentsController } from './controllers/students.controller';
 import { SubjectsController } from './controllers/subjects.controller';
 import { CoursesService } from './services/courses.service';
 import { PreceptorsService } from './services/preceptors.service';
+import { SchoolAdminService } from './services/school-admin.service';
 import { SchoolsService } from './services/schools.service';
 import { SpeciallityService } from './services/speciallity.service';
 import { StudentsService } from './services/students.service';
 import { SubjectsService } from './services/subjects.service';
 import { TeachersService } from './services/teachers.service';
-import { SchoolAdminController } from './controllers/school-admin.controller';
-import { SchoolAdminService } from './services/school-admin.service';
 
 @Module({
 	imports: [
@@ -44,7 +44,7 @@ import { SchoolAdminService } from './services/school-admin.service';
 		PreceptorsService,
 		CoursesService,
 		TeachersService,
-		SchoolAdminService
+		SchoolAdminService,
 	],
 })
 export class SchoolsModule {}

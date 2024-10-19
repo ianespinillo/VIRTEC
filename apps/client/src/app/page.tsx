@@ -1,5 +1,5 @@
-import { LoginForm } from '@repo/ui/components/forms/login-form';
+import React from 'react';
 
 export default function Home() {
-	return <LoginForm />;
+	return <div>Home</div>;
 }

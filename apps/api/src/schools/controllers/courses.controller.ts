@@ -1,7 +1,5 @@
 import { PermissionsNeeded } from '@/auth/decorators/permissions.decorator';
 import { User } from '@/auth/decorators/user.decorator';
-import { AuthUser } from '../../../../../packages/types/src/auth/types';
-import { PERMISSIONS } from '@repo/common/src/permissions';
 import {
 	Body,
 	Controller,
@@ -11,12 +9,13 @@ import {
 	ParseIntPipe,
 	Post,
 } from '@nestjs/common';
-import type { CreateCourseDTO } from '../../../../../packages/types/src/schools/create-course.dto';
+import { AuthUser, PERMISSIONS } from '@repo/common';
+import type { CreateCourseDTO } from '@repo/common';
 import { CoursesService } from '../services/courses.service';
 
 @Controller('courses')
 export class CoursesController {
-	constructor(private coursesService: CoursesService) {}
+	constructor(private readonly coursesService: CoursesService) {}
 
 	@PermissionsNeeded(PERMISSIONS.CREATE_COURSE)
 	@Post()

@@ -8,6 +8,7 @@ import { AuthService } from './auth.service';
 const usersServiceMock = {
 	findByDni: jest.fn(),
 	findByEmail: jest.fn(),
+	getUserRole: jest.fn(),
 };
 
 const jwtServiceMock = {
@@ -127,6 +128,17 @@ describe('AuthService', () => {
 			});
 			compareMock.mockResolvedValue(false);
 			expect(service.loginWithDni(user)).rejects.toThrow(UnauthorizedException);
+		});
+		it('should get role', async () => {
+			const role_id = 1;
+			usersServiceMock.getUserRole.mockResolvedValue({
+				id: 1,
+				name: 'admin',
+			});
+			expect(await service.getRole(role_id)).toEqual({
+				id: 1,
+				name: 'admin',
+			});
 		});
 	});
 

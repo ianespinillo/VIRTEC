@@ -1,4 +1,4 @@
-import { AuthUser } from '../../../../packages/types/src/auth/types';
+import { AuthUser } from '@repo/common';
 
 export const fakeUserMock: AuthUser = {
 	id: '1',
@@ -6,6 +6,7 @@ export const fakeUserMock: AuthUser = {
 	email: 'a@a.com',
 	name: 'test',
 	school_id: 1,
+	role_id: 1,
 	permissions: [
 		'ASSIGN_PRECEPTOR_TO_COURSE',
 		'ASSIGN_STUDENT_TO_COURSE',

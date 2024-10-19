@@ -10,7 +10,6 @@
 		"sourceMap": true,
 		"outDir": "./dist",
 		"moduleResolution": "node",
-		"baseUrl": "./",
 		"incremental": true,
 		"skipLibCheck": true,
 		"strictNullChecks": false,
@@ -20,7 +19,7 @@
 		"noFallthroughCasesInSwitch": false,
 		"strict": true,
 		"paths": {
-			"@/*": ["src/*"]
+			"@/*": ["./src/*"]
 		}
 	}
 }

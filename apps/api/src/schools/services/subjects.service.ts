@@ -1,6 +1,6 @@
 import { PrismaService } from '@/db/prisma.service';
 import { BadRequestException, Injectable } from '@nestjs/common';
-import type { CreateSubjectDto } from '../../../../../packages/types/src/schools/create-subject.dto';
+import type { CreateSubjectDto } from '@repo/common';
 import type { Subject } from '../types';
 import { CoursesService } from './courses.service';
 import { TeachersService } from './teachers.service';

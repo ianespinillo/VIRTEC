@@ -1,11 +1,7 @@
-import { PASSWORD_LENGTH } from '@/common/constants';
-import { PERMISSIONS } from '@repo/common/src/permissions';
-import { ROLES } from '@repo/common/src/roles';
 import { PasswordAdapter } from '@/config/password-adapter';
 import { Injectable, type OnModuleInit } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
-
-import { prismaMock } from '@/testing/mock-db';
+import { PASSWORD_LENGTH, PERMISSIONS, ROLES } from '@repo/common';
 import { courses } from '../../prisma/fixtures/courses';
 import { role_permission } from '../../prisma/fixtures/permission';
 import { fakeSchool } from '../../prisma/fixtures/schools';
@@ -56,13 +52,9 @@ export class PrismaService extends PrismaClient implements OnModuleInit {
 				email: preceptorFake.email,
 				password: preceptorPassword.hashedPassword,
 				school_id: school.id,
+				role_id: 5,
 				user_detail: {
 					create: preceptorFake.user_detail,
-				},
-				user_role: {
-					create: {
-						rol_id: 5,
-					},
 				},
 			},
 		});
@@ -96,6 +88,7 @@ export class PrismaService extends PrismaClient implements OnModuleInit {
 				email: adminFake.email,
 				password: hashedPassword,
 				school_id: school.id,
+				role_id: 5,
 				user_detail: {
 					create: adminFake.user_detail,
 				},

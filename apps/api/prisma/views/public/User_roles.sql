@@ -6,9 +6,7 @@ select u.id,
     s.id as school_id,
     s."name" as school_name
 from "User" u
-    inner join "userDetail" ud on ud.user_id = u.id
-    inner join "userRole" ur on ur.user_id = u.id
-    inner join "Roles" r on r.id = ur.rol_id
+    inner join "Roles" r on r.id = u.rol_id
     inner join "School" s on s.id = u.school_id
 WHERE u."deleted_at" IS null;
 CREATE UNIQUE INDEX idx_User_roles ON public.User_roles (id);

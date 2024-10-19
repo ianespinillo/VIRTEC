@@ -1,7 +1,7 @@
 import { PrismaService } from '@/db/prisma.service';
-import type { CreateUserDTO } from '@/users/dtos/user.dto';
 import { UsersService } from '@/users/users.service';
 import { BadRequestException, Injectable } from '@nestjs/common';
+import type { CreateUserDTO } from '@repo/common';
 
 @Injectable()
 export class PreceptorsService {

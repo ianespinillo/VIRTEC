@@ -2,7 +2,7 @@ import { PrismaService } from '@/db/prisma.service';
 import { UsersService } from '@/users/users.service';
 import { Injectable } from '@nestjs/common';
 import { Student } from '@prisma/client';
-import type { CreateStudentDTO } from '../../../../../packages/types/src/schools/create-student.dto';
+import type { CreateStudentDTO } from '@repo/common/';
 
 @Injectable()
 export class StudentsService {

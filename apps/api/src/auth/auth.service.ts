@@ -5,9 +5,8 @@ import {
 	UnauthorizedException,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
+import type { LoginDniDTO, LoginEmailDTO } from '@repo/common';
 import { compare } from 'bcryptjs';
-import type { LoginDniDTO } from '../../../../packages/types/src/auth/login-dni.dto';
-import type { LoginEmailDTO } from '../../../../packages/types/src/auth/login-password.dto';
 
 @Injectable()
 export class AuthService {
@@ -49,4 +48,8 @@ export class AuthService {
 		const token = await this.jwtService.signAsync(payload);
 		return { acces_token: token };
 	}
+	async getRole(role_id: number) {
+		return this.usersService.getUserRole(role_id);
+	}
 }
+//

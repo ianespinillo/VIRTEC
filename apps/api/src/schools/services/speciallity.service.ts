@@ -1,7 +1,7 @@
 import { PrismaService } from '@/db/prisma.service';
 import { SchoolsService } from '@/schools/services/schools.service';
 import { BadRequestException, Injectable } from '@nestjs/common';
-import type { CreateSpeciallityDTO } from '../../../../../packages/types/src/schools/create-speciallity.dto';
+import type { CreateSpeciallityDTO } from '@repo/common/';
 
 @Injectable()
 export class SpeciallityService {

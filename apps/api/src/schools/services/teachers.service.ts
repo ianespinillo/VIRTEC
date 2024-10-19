@@ -2,7 +2,7 @@ import { PrismaService } from '@/db/prisma.service';
 import { UsersService } from '@/users/users.service';
 import { BadRequestException, Injectable } from '@nestjs/common';
 import type { Teacher } from '@prisma/client';
-import type { CreateTeacherDTO } from '../../../../../packages/types/src/schools/create-teacher.dto';
+import type { CreateTeacherDTO } from '@repo/common';
 
 @Injectable()
 export class TeachersService {

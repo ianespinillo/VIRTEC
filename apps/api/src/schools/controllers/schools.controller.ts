@@ -1,5 +1,4 @@
 import { PermissionsNeeded } from '@/auth/decorators/permissions.decorator';
-import { PERMISSIONS } from '@repo/common/src/permissions';
 import { SchoolsService } from '@/schools/services/schools.service';
 import {
 	Body,
@@ -13,8 +12,9 @@ import {
 	UploadedFile,
 	UseInterceptors,
 } from '@nestjs/common';
-import type { CreateSchoolDTO } from '../../../../../packages/types/src/schools/create-school.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
+import { type CreateSchoolDTO, PERMISSIONS } from '@repo/common';
+import { Express } from 'express';
 
 @Controller('schools')
 export class SchoolsController {
@@ -23,10 +23,13 @@ export class SchoolsController {
 	@PermissionsNeeded(PERMISSIONS.CREATE_SCHOOLS)
 	@Post()
 	@UseInterceptors(FileInterceptor('crest'))
-	async create(@Body() body: CreateSchoolDTO, @UploadedFile() crest: Express.Multer.File) {
+	async create(
+		@Body() body: CreateSchoolDTO,
+		@UploadedFile() crest: Express.Multer.File,
+	) {
 		return await this.schoolsService.createSchool({
 			...body,
-			crest
+			crest,
 		});
 	}
 
@@ -48,13 +51,16 @@ export class SchoolsController {
 	}
 
 	@PermissionsNeeded(PERMISSIONS.UPDATE_SCHOOLS)
-    @Put(':id')
+	@Put(':id')
 	@UseInterceptors(FileInterceptor('crest'))
-    async update(@Param('id', ParseIntPipe) id: number, @Body() body: CreateSchoolDTO, @UploadedFile() crest: Express.Multer.File) {
-		
-        return await this.schoolsService.updateSchool(id, {
+	async update(
+		@Param('id', ParseIntPipe) id: number,
+		@Body() body: CreateSchoolDTO,
+		@UploadedFile() crest: Express.Multer.File,
+	) {
+		return await this.schoolsService.updateSchool(id, {
 			...body,
-			crest
+			crest,
 		});
-    }
+	}
 }

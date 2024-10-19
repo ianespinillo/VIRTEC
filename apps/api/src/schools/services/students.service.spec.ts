@@ -36,7 +36,7 @@ const prismaMock = {
 	studentDetail: {
 		create: jest.fn(),
 	},
-	sqtudent_info: {
+	student_info: {
 		create: jest.fn(),
 		findUnique: jest.fn(),
 	},
@@ -162,7 +162,7 @@ describe('StudentsService', () => {
 					},
 				},
 			};
-			prismaMock.sqtudent_info.findUnique.mockResolvedValue(mock);
+			prismaMock.student_info.findUnique.mockResolvedValue(mock);
 			expect(await service.findStudent(1)).toEqual(mock);
 		});
 		it('should find students by school', async () => {

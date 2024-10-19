@@ -1,31 +1,51 @@
 {
-  "folders": [
-    {
-      "name": "root",
-      "path": ".."
-    },
-    {
-      "name": "@repo/common",
-      "path": "../packages/common"
-    },
-    {
-      "name": "@repo/eslint-config",
-      "path": "../packages/eslint-config"
-    },
-    {
-      "name": "@repo/hooks",
-      "path": "../packages/hooks"
-    },
-    {
-      "name": "@repo/types",
-      "path": "../packages/types"
-    },
-    {
-      "name": "@repo/ui",
-      "path": "../packages/ui"
-    }
-  ],
-  "settings": {
-    "typescript.tsdk": "root\\node_modules\\typescript\\lib"
-  }
+	"folders": [
+		{
+			"name": "root",
+			"path": ".."
+		},
+		{
+			"name": "client",
+			"path": "../apps/client"
+		},
+		{
+			"name": "api",
+			"path": "../apps/api"
+		},
+		{
+			"name": "@repo/common",
+			"path": "../packages/common"
+		},
+		{
+			"name": "@repo/eslint-config",
+			"path": "../packages/eslint-config"
+		},
+		{
+			"name": "@repo/hooks",
+			"path": "../packages/hooks"
+		},
+		{
+			"name": "@repo/types",
+			"path": "../packages/types"
+		},
+		{
+			"name": "@repo/ui",
+			"path": "../packages/ui"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "root\\node_modules\\typescript\\lib",
+		"sqltools.connections": [
+			{
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 5434,
+				"driver": "PostgreSQL",
+				"name": "VIRTEC",
+				"database": "virtec_dev_db",
+				"username": "virtec_user",
+				"password": "virtec_password"
+			}
+		]
+	}
 }
