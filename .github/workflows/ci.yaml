@@ -1,0 +1,34 @@
+name: ci
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - develop
+
+jobs:
+  pre-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js and Pnpm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.16.0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.8.0
+          
+      - name: Install dependencies
+        run: pnpm install
+        
+      - name: Check transpiler
+        run: pnpm ts:check
+        
+      - name: Check eslint
+        run: pnpm lint:check
+
+      - name: Check tests
+        run: pnpm run test  
