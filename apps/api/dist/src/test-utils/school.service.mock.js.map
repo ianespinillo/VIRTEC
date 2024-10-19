@@ -1,0 +1,1 @@
+{"version":3,"file":"school.service.mock.js","sourceRoot":"","sources":["../../../src/test-utils/school.service.mock.ts"],"names":[],"mappings":";;;AAAA,yEAAoE;AAE7D,MAAM,oBAAoB,GAAG,GAAG,EAAE,CAAC,CAAC;IAC1C,OAAO,EAAE,gCAAc;IACvB,QAAQ,EAAE;QACT,UAAU,EAAE,IAAI,CAAC,EAAE,EAAE;QACrB,YAAY,EAAE,IAAI,CAAC,EAAE,EAAE;KACvB;CACD,CAAC,CAAC;AANU,QAAA,oBAAoB,wBAM9B"}

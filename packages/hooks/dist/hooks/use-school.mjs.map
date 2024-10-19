@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/hooks/use-school.ts"],"names":[],"mappings":"AAAO,MAAM,YAAY,MAAM;AAAC","file":"use-school.mjs","sourcesContent":["export const useSchool = () => {};\n"]}
