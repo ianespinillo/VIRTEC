@@ -23,6 +23,12 @@ jobs:
           
       - name: Install dependencies
         run: pnpm install
+
+      - name: Pre-build
+        run: pnpm build
+        
+      - name: Check transpiler
+        run: pnpm ts:check
         
       - name: Check eslint
         run: pnpm lint:check
