@@ -1,0 +1,1 @@
+{"version":3,"file":"courses.js","sourceRoot":"","sources":["../../../prisma/fixtures/courses.ts"],"names":[],"mappings":";;;AAAa,QAAA,OAAO,GAAG;IACtB;QACC,IAAI,EAAE,CAAC;QACP,QAAQ,EAAE,CAAC;KACX;IACD;QACC,IAAI,EAAE,CAAC;QACP,QAAQ,EAAE,CAAC;KACX;CACD,CAAC"}
