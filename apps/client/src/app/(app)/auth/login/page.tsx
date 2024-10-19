@@ -1,4 +1,5 @@
-import { LoginForm } from '@repo/ui/components/forms/login-form';
+'use client';
+import { LoginForm } from '@repo/ui';
 import React from 'react';
 
 export default function LoginPage() {

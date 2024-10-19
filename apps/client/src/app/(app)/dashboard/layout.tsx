@@ -6,9 +6,7 @@ export default async function Dashlayout({
 	superadmin,
 	schooladmin,
 	student,
-	children,
 }: {
-	children: ReactNode;
 	superadmin: ReactNode;
 	schooladmin: ReactNode;
 	student: ReactNode;

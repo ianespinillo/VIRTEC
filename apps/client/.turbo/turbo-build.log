@@ -1,0 +1,33 @@
+
+> client@0.1.0 build C:\Users\Espin\Documents\GitHub\virtec\apps\client
+> next build
+
+  ▲ Next.js 14.2.11
+  - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/7) ...
+   Generating static pages (1/7) 
+   Generating static pages (3/7) 
+   Generating static pages (5/7) 
+ ✓ Generating static pages (7/7)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    150 B          87.3 kB
+├ ○ /_not-found                          872 B            88 kB
+├ ○ /auth/login                          168 kB          269 kB
+└ ƒ /dashboard                           150 B          87.3 kB
++ First Load JS shared by all            87.1 kB
+  ├ chunks/576-e4198e87e9d7d478.js       31.6 kB
+  ├ chunks/77eeabc5-4d17422d760e4935.js  53.6 kB
+  └ other shared chunks (total)          1.95 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -12,6 +12,9 @@
 		"forceConsistentCasingInFileNames": true,
 		"moduleResolution": "nodenext",
 		"isolatedModules": true,
-		"baseUrl": "."
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./packages/ui/src/*"]
+		}
 	}
 }
